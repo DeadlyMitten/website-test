@@ -1,0 +1,56 @@
+:root {
+  --darkDrago: #8EBBE8;
+  --mediumDrago: #A5CFFF;
+  --lightDrago: #D6F1FF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--lightDrago);
+}
+
+
+.gridbox {
+  height: 100vh;
+  width: 99vw;
+  display: grid;
+  grid-template-rows:15% auto;
+  grid-template-columns: auto;
+}
+
+
+.header {
+  font-size: 10vh;
+  background-color: var(--mediumDrago);
+}
+
+.headerimg {
+  height: 15vh;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-grid;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--darkDrago);
+
+}
+
+
+.dropdown:hover .dropdown-content: {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  grid-auto-flow: row;
+  z-index: 1;
+}
